@@ -1,0 +1,65 @@
+<html>
+<head>
+	<style>
+		body { font-family:arial; }
+		
+.inlineInput {
+    border-width: 0px 0px 1px;
+    border-style: none none dashed;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    border-color: #08C;
+}		
+	</style>
+	<title>inlineedit.js usage example</title>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+
+<div style="width: 500px;">
+	<div>
+		<span id="txt1">Simple example</span>
+		<span style="float: right">
+			<a href="#" onclick="javascript:$('#txt1').inLineEdit();">edit</a> 
+			<a href="#" onclick="javascript:$('#txt1').inLineEdit('destroy');">cancel</a> 
+			<a href="#" onclick="javascript:alert($('#txt1').inLineEdit('value'));">value</a>
+		</span>
+	</div>
+	<div>
+		<span id="txt2" data-type="email" data-title="Enter Email address" data-minwidth="220" data-maxwidth="400" data-required="1">email example</span>
+		<span style="float: right">
+			<a href="#" onclick="javascript:$('#txt2').inLineEdit();">edit</a> 
+			<a href="#" onclick="javascript:$('#txt2').inLineEdit('destroy');">cancel</a> 
+			<a href="#" onclick="javascript:alert($('#txt2').inLineEdit('value'));">value</a>
+		</span>
+	</div>
+	<div>
+		<pre id="txt3" data-type="textarea">message 
+		example
+		</pre>
+		<span>
+			<a href="#" onclick="javascript:$('#txt3').inLineEdit();">edit</a> 
+			<a href="#" onclick="javascript:$('#txt3').inLineEdit('destroy');">cancel</a> 
+			<a href="#" onclick="javascript:alert($('#txt3').inLineEdit('value'));">value</a>
+		</span>
+	</div>
+	<div>
+		<span id="txt4">input events</span>
+		<span style="float: right">
+			<a href="#" onclick="javascript:$('#txt4').inLineEdit().inLineEdit('input').on('input', function(){console.log('input')});">edit</a> 
+			<a href="#" onclick="javascript:$('#txt4').inLineEdit('destroy');">cancel</a> 
+			<a href="#" onclick="javascript:alert($('#txt4').inLineEdit('value'));">value</a>
+		</span>
+	</div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="../inlineedit-min.js"></script>
+
+
+</body>
+</html>
